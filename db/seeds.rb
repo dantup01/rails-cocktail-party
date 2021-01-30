@@ -56,4 +56,17 @@ Ingredient.create(name: "dry vermouth")
 Ingredient.create(name: "olive")
 Ingredient.create(name: "lemon peel")
 
+puts 'Putting cocktails together...'
+
+Cocktail.create(name: "Pisco Sour")
+Cocktail.create(name: "Caipirinha")
+Cocktail.create(name: "Margarita")
+Cocktail.create(name: "Manhatten")
+Cocktail.create(name: "Negroni")
+Cocktail.create(name: "Mohito")
+Cocktail.create(name: "Dark and Stormy")
+Cocktail.create(name: "Espresso Martini")
+Cocktail.create(name: "Tom Collins")
+Cocktail.create(name: "Martini")
+
 puts 'Finished!'
