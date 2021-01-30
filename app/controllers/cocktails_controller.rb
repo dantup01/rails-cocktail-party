@@ -1,4 +1,4 @@
-class CocktailController < ApplicationController
+class CocktailsController < ApplicationController
   before_action :set_cocktail, only: [:show, :edit]
 
   def index
