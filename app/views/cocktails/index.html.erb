@@ -8,17 +8,4 @@
 
 </div>
 
-<div class="container">
-  <div class="row">
-    <% @cocktails.each do |cocktail| %>
-      <div class="card" style="width: 18rem;">
-        <img class="card-img-top" src="" alt="Card image cap">
-        <div class="card-body">
-          <h5 class="card-title"><%= link_to cocktail.name, cocktail_path(cocktail.id) %></h5>
-          <p class="card-text"><%= cocktail.description %></p>
-          <a href="#" class="btn btn-primary">Go somewhere</a>
-        </div>
-      </div>
-    <% end %>
-  </div>
-</div>
+<%= render 'card' %>
