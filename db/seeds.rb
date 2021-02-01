@@ -8,8 +8,8 @@ ingredients = {
   alcohol: ['pisco', 'angostura bitters', 'cachaça', 'tequila', 'cointreau', 'rhy whiskey',
             'sweet vermouth', 'gin', 'campari', 'white rum', 'dark rum', 'kahlua', 'vodka',
             'dry vermouth'],
-  mixers: ['lime juice', 'sugar', 'egg white', 'crushed ice', 'ice', 'salt',
-           'soda', 'ginger beer', 'espresso', 'sugar syrup', 'lemon juice'],
+  mixer: ['lime juice', 'sugar', 'egg white', 'crushed ice', 'ice', 'salt',
+          'soda', 'ginger beer', 'espresso', 'sugar syrup', 'lemon juice'],
   garnish: ['mint leaves', 'maraschino cherry', 'orange peel', 'lime wedge', 'coffee beans',
             'grapefruit wedge', 'olive', 'lemon peel']
 }
