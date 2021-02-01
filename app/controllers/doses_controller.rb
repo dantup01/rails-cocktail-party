@@ -4,7 +4,9 @@ class DosesController < ApplicationController
 
   def new
     @dose = Dose.new
-    @ingredients = Ingredient.all
+    @alcohols = Alcohol.all
+    @mixers = Mixer.all
+    @garnishes = Garnish.all
   end
 
   def create
@@ -36,6 +38,6 @@ class DosesController < ApplicationController
   end
 
   def dose_params
-    params.require(:dose).permit(:description, :ingredient_id)
+    params.require(:dose).permit(:description, :alcohol_id, :mixer_id, :garnish_id)
   end
 end
