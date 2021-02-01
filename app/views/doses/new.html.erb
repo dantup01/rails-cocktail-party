@@ -2,7 +2,7 @@
   <h2>Create a dose</h2>
 
   <%= simple_form_for([@cocktail, @dose]) do |f| %>
-      <%= f.association :ingredient %>
+      <%= f.association :alcohol %>
       <%= f.input :description %>
       <%= f.submit "Add an ingredient", class: "btn btn-primary"%>
   <% end %>

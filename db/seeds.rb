@@ -73,7 +73,7 @@ puts 'Putting cocktails together...'
 Cocktail.create(name: "Pisco Sour")
 Cocktail.create(name: "Caipirinha")
 Cocktail.create(name: "Margarita")
-Cocktail.create(name: "Manhatten")
+Cocktail.create(name: "Manhattan")
 Cocktail.create(name: "Negroni")
 Cocktail.create(name: "Mohito")
 Cocktail.create(name: "Dark and Stormy")

@@ -10,10 +10,16 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_01_30_121714) do
+ActiveRecord::Schema.define(version: 2021_02_01_173838) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+
+  create_table "alcohols", force: :cascade do |t|
+    t.string "name"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+  end
 
   create_table "cocktails", force: :cascade do |t|
     t.string "name"
@@ -26,17 +32,25 @@ ActiveRecord::Schema.define(version: 2021_01_30_121714) do
   create_table "doses", force: :cascade do |t|
     t.string "description"
     t.bigint "cocktail_id"
-    t.bigint "ingredient_id"
+    t.bigint "alcohol_id"
+    t.bigint "mixer_id"
+    t.bigint "garnish_id"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
+    t.index ["alcohol_id"], name: "index_doses_on_alcohol_id"
     t.index ["cocktail_id"], name: "index_doses_on_cocktail_id"
-    t.index ["ingredient_id"], name: "index_doses_on_ingredient_id"
+    t.index ["garnish_id"], name: "index_doses_on_garnish_id"
+    t.index ["mixer_id"], name: "index_doses_on_mixer_id"
   end
 
-  create_table "ingredients", force: :cascade do |t|
-    t.string "alcohol"
-    t.string "mixer"
-    t.string "garnish"
+  create_table "garnishes", force: :cascade do |t|
+    t.string "name"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+  end
+
+  create_table "mixers", force: :cascade do |t|
+    t.string "name"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
   end
