@@ -1,28 +1,32 @@
 puts 'Cleaning database...'
-Ingredient.destroy_all
+Alcohol.destroy_all
+Mixer.destroy_all
+Garnish.destroy_all
 
 puts 'Creating ingredients...'
 
 # Pisco Sour
-alcohols = {
-  name: ['pisco', 'angostura bitters', 'cachaça', 'tequila', 'cointreau', 'rhy whiskey',
-         'sweet vermouth', 'gin', 'campari', 'white rum', 'dark rum', 'kahlua', 'vodka',
-         'dry vermouth']
-}
+ALCOHOLS = ['pisco', 'angostura bitters', 'cachaça', 'tequila', 'cointreau', 'rhy whiskey',
+            'sweet vermouth', 'gin', 'campari', 'white rum', 'dark rum', 'kahlua', 'vodka',
+            'dry vermouth']
 
-mixers = {
-  name: ['lime juice', 'sugar', 'egg white', 'crushed ice', 'ice', 'salt',
-         'soda', 'ginger beer', 'espresso', 'sugar syrup', 'lemon juice'],
-}
+MIXERS = ['lime juice', 'sugar', 'egg white', 'crushed ice', 'ice', 'salt',
+          'soda', 'ginger beer', 'espresso', 'sugar syrup', 'lemon juice']
 
-garnishes = {
-  name: ['mint leaves', 'maraschino cherry', 'orange peel', 'lime wedge', 'coffee beans',
-         'grapefruit wedge', 'olive', 'lemon peel']
-}
+GARNISHES = ['mint leaves', 'maraschino cherry', 'orange peel', 'lime wedge', 'coffee beans',
+             'grapefruit wedge', 'olive', 'lemon peel']
 
-Alcohol.create!(alcohols)
-Mixer.create!(mixers)
-Garnishes.create!(garnishes)
+ALCOHOLS.each do |a|
+  Alcohol.create(name: a.to_s)
+end
+
+MIXERS.each do |m|
+  Mixer.create(name: m.to_s)
+end
+
+GARNISHES.each do |g|
+  Garnish.create(name: g.to_s)
+end
 
 # Ingredient.create(name: "lime juice")
 # Ingredient.create(name: "sugar")

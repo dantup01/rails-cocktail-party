@@ -1,0 +1,22 @@
+<div class="container">
+  <h2>Add your ingredients</h2>
+
+  <%= simple_form_for([@cocktail, @dose]) do |f| %>
+    <div class="row">
+      <div class="col">
+        <%= f.input :alcohol_id, collection: Alcohol.order(:name), as: :check_boxes %>
+      </div>
+
+      <div class="col">
+        <%= f.input :mixer_id, collection: Mixer.order(:name), as: :check_boxes %>
+      </div>
+
+      <div class="col">
+        <%= f.input :garnish_id, collection: Garnish.order(:name), as: :check_boxes %>
+      </div>
+    </div>
+
+    <%= f.input :description, label: 'Add the method', as: :text%>
+    <%= f.submit "Add ingredients", class: "btn btn-primary"%>
+  <% end %>
+</div>
