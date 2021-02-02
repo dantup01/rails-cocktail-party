@@ -1,6 +1,6 @@
 class Mixer < ApplicationRecord
   validates :name, presence: true, uniqueness: true
 
-  has_many :doses
-  has_many :cocktails, through: :doses
+  has_many :ingredients
+  has_many :cocktails, through: :ingredients
 end
