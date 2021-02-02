@@ -1,4 +1,5 @@
 puts 'Cleaning database...'
+Cocktail.destroy_all
 Alcohol.destroy_all
 Mixer.destroy_all
 Garnish.destroy_all
@@ -17,15 +18,15 @@ GARNISHES = ['mint leaves', 'maraschino cherry', 'orange peel', 'lime wedge', 'c
              'grapefruit wedge', 'olive', 'lemon peel']
 
 ALCOHOLS.each do |a|
-  Alcohol.create(name: a.to_s)
+  Alcohol.create(name: a.to_s.titleize)
 end
 
 MIXERS.each do |m|
-  Mixer.create(name: m.to_s)
+  Mixer.create(name: m.to_s.titleize)
 end
 
 GARNISHES.each do |g|
-  Garnish.create(name: g.to_s)
+  Garnish.create(name: g.to_s.titleize)
 end
 
 # Ingredient.create(name: "lime juice")
@@ -82,15 +83,15 @@ end
 
 puts 'Putting cocktails together...'
 
-Cocktail.create(name: "Pisco Sour")
-Cocktail.create(name: "Caipirinha")
-Cocktail.create(name: "Margarita")
-Cocktail.create(name: "Manhattan")
-Cocktail.create(name: "Negroni")
-Cocktail.create(name: "Mohito")
-Cocktail.create(name: "Dark and Stormy")
-Cocktail.create(name: "Espresso Martini")
-Cocktail.create(name: "Tom Collins")
-Cocktail.create(name: "Martini")
+Cocktail.create(name: "Pisco Sour", description: "Pisco Sour")
+Cocktail.create(name: "Caipirinha", description: "Caipirinha")
+Cocktail.create(name: "Margarita", description: "Margarita")
+Cocktail.create(name: "Manhattan", description: "Manhattan")
+Cocktail.create(name: "Negroni", description: "Negroni")
+Cocktail.create(name: "Mohito", description: "Mohito")
+Cocktail.create(name: "Dark and Stormy", description: "Dark and Stormy")
+Cocktail.create(name: "Espresso Martini", description: "Espresso Martini")
+Cocktail.create(name: "Tom Collins", description: "Tom Collins")
+Cocktail.create(name: "Martini", description: "Martini")
 
 puts 'Finished!'

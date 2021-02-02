@@ -1,7 +1,7 @@
 <div class="container">
   <h2>Add your ingredients</h2>
 
-  <%= simple_form_for([@cocktail, @dose]) do |f| %>
+  <%= simple_form_for([@cocktail, @ingredient]) do |f| %>
     <div class="row">
       <div class="col">
         <%= f.input :alcohol_id, collection: Alcohol.order(:name), as: :check_boxes %>
