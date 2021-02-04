@@ -23,7 +23,7 @@
       <h1>Ingredients</h1>
       <% @cocktail.ingredients.each do |ingredient| %>
         <ul>
-          <li><%= ingredient.name %></li>
+          <li><%= ingredient.name %><%= ingredient.dose.description %></li>
         </ul>
       <% end %>
       <br>

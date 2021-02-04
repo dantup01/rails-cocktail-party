@@ -2,8 +2,8 @@
   <h2>Add your ingredients</h2>
 
   <%= simple_form_for([@cocktail, @dose]) do |f| %>
-    <%= f.input :ingredient_id, collection: Ingredient.order(:name) %>
+    <%= f.input :ingredient_id, collection: Ingredient.order(:name), html_input: { multiple: true } %>
     <%= f.input :description, label: 'Add the quantity', as: :text%>
-    <%= f.submit "Add ingredients", value: 'Add', class: "btn btn-primary"%>
+    <%= f.submit "Add ingredient", value: 'Add', class: "btn btn-primary"%>
   <% end %>
 </div>
