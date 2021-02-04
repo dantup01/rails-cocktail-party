@@ -53,6 +53,8 @@ h2 span {
 body {
   background: #24282f;
   font-family: 'Oswald';
+  text-decoration: none;
+  color: white;
 }
 .wrapper {
   padding: 15px;
@@ -81,6 +83,9 @@ h2:after {
   height: 2px;
   left: 0;
   right: 0;
+  font-family: 'Oswald';
+  text-decoration: none;
+  color: white;
 }
 .cards,
 .news {

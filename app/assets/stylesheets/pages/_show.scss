@@ -1,0 +1,26 @@
+@import "navbar_fixed";
+
+.left-column {
+  width: 50%;
+  float: left;
+}
+
+.right-column {
+  width: 50%;
+  float: right;
+}
+
+.show-cards .card {
+  margin: 20px;
+  width: 280px;
+  height: 370px;
+  overflow: hidden;
+  box-shadow: 0 5px 10px rgba(0,0,0,0.8);
+}
+
+.show-cards .card img {
+  position: center;
+  width: 100%;
+  min-height: 100%;
+  object-fit: cover;
+}

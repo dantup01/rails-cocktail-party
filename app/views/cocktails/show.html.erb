@@ -1,11 +1,31 @@
-<div class="container"
-  <h1><%= @cocktail.name %></h1>
-  <p><%= @cocktail.about %></p>
+<%= render 'shared/nav_affix'%>
 
-  <% @cocktail.ingredients.each do |ingredient| %>
-    <%= ingredient.name %>
-  <% end %>
-  <%= link_to "Add dose",  new_cocktail_dose_path(@cocktail), class: 'btn btn-primary' %>
-  <%= link_to "Go back to cocktails", cocktails_path, class: 'btn btn-primary' %>
-  <%= link_to "Delete ingredient", dose_path(@cocktail), class: 'btn btn-danger' %>
+<div class="container">
+<br>
+<br>
+<br>
+  <div class="left-column">
+    <div class="show-cards">
+      <h1><%= @cocktail.name %></h1>
+      <p><%= @cocktail.about %></p>
+      <figure class="card">
+          <%= image_tag "#{@cocktail.name.downcase}.jpg", alt: "alttext" %>
+      </figure>
+    </div>
+  </div>
+  <div class="right-column">
+    <div class="cocktail-description">
+
+      <p>Method</p>
+      <%= h(@cocktail.method).gsub(/\n/, '<br/>').html_safe %>
+      <% @cocktail.ingredients.each do |ingredient| %>
+        <ul>
+          <li><%= ingredient.name %></li>
+        </ul>
+      <% end %>
+    <%= link_to "Add ingredient",  new_cocktail_dose_path(@cocktail), class: 'btn btn-primary' %>
+    <%= link_to "Go back to cocktails", cocktails_path, class: 'btn btn-primary' %>
+    <%= link_to "Delete ingredient", dose_path(@cocktail), class: 'btn btn-danger' %>
+    </div>
+  </div>
 </div>

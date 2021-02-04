@@ -1,3 +1,4 @@
+<%= render 'shared/navbar' %>
 <div id="hero">
   <%= video_tag "video.mp4", autoplay: :autoplay, loop: :loop, muted: :muted, class: "home_video" %>
 
@@ -10,6 +11,12 @@
 
 </div>
 
+<br>
+<!-- <form onsubmit="event.preventDefault();" role="search">
+  <label for="search">Search</label>
+  <input id="search" type="search" placeholder="Search..." autofocus required />
+  <button type="submit">Go</button>
+</form> -->
 <h1 class="drinks-header">THE SIGNATURES</h1>
-<p class="caption underscore-flip">_________________________________________________________________________________</p>
+<p class="caption underscore-flip">_______________________________________________________________________________________________</p>
 <%= render 'card' %>

@@ -1,15 +1,4 @@
-@import url('https://fonts.googleapis.com/css?family=Quicksand:400,500,700');
-html,
-body {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: "Quicksand", sans-serif;
-    font-size: 62.5%;
-    font-size: 10px;
-}
-/*-- Inspiration taken from abdo steif -->
-/* --> https://codepen.io/abdosteif/pen/bRoyMb?editors=1100*/
+
 
 /* Navbar section */
 
@@ -32,7 +21,7 @@ body {
 .nav div.logo a {
   text-decoration: none;
   color: #fff;
-  font-size: 2.5rem;
+  font-size: 1.5rem;
 }
 
 .nav div.logo a:hover {
@@ -64,7 +53,7 @@ body {
     text-decoration: none;
     color: #fff;
     line-height: 65px;
-    font-size: 2.4rem;
+    font-size: 1.5rem;
 }
 
 .nav div.main_list ul li a:hover {
@@ -75,14 +64,14 @@ body {
 /* Home section */
 
 .navTrigger {
-    display: none;
+  display: none;
 }
 
 .nav {
-    padding-top: 20px;
-    padding-bottom: 20px;
-    -webkit-transition: all 0.4s ease;
-    transition: all 0.4s ease;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  -webkit-transition: all 0.4s ease;
+  transition: all 0.4s ease;
 }
 
 
@@ -349,26 +338,3 @@ body {
     padding:2%;
   }
 }
-
-
-// .navbar-lewagon {
-//   justify-content: space-between;
-//   background-color: #1E3231;
-//   z-index: 20;
-//   font-family: 'Oswald', sans-serif;
-//   text-decoration: none;
-//   color: white;
-// }
-
-// .navbar-lewagon .navbar-collapse {
-//   flex-grow: 0;
-// }
-
-// .navbar-lewagon .navbar-brand img {
-//   width: 40px;
-// }
-
-// .navbar-lewagon .home-logo {
-//   text-decoration: none;
-//   color: white;
-// }
