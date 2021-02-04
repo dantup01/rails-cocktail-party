@@ -3,11 +3,16 @@
 .left-column {
   width: 50%;
   float: left;
+  text-align: center;
 }
 
 .right-column {
-  width: 50%;
+  width: 40%;
   float: right;
+}
+
+hr {
+  border-color: white;
 }
 
 .show-cards .card {
@@ -16,10 +21,12 @@
   height: 370px;
   overflow: hidden;
   box-shadow: 0 5px 10px rgba(0,0,0,0.8);
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .show-cards .card img {
-  position: center;
   width: 100%;
   min-height: 100%;
   object-fit: cover;

@@ -25,7 +25,11 @@ class CocktailsController < ApplicationController
   def edit; end
 
   def update
-    @cocktail.update(cocktail_params)
+    if @cocktail.update(cocktail_params)
+      redirect_to cocktail_path(@cocktail), notice: "Cocktail Updated"
+    else
+      render :edit
+    end
   end
 
   def destroy

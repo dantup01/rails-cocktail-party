@@ -1,9 +1,10 @@
 <div class="form-container" >
   <%= simple_form_for [@cocktail] do |f| %>
-    <%= f.input :name %>
-    <%= f.input :about %>
-    <%= f.input :method %>
+    <%= f.input :name, placeholder: 'Name' %>
+    <%= f.input :about, placeholder: 'About' %>
+    <%= f.input :method, placeholder: 'Method' %>
     <%= f.input :photo, as: :file %>
     <%= f.submit "Add Cocktail", class: "btn btn-primary"%>
+    <%= link_to "Go back", cocktails_path, class: 'btn btn-primary' %>
   <% end %>
 </div>

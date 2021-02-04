@@ -4,7 +4,7 @@
       <% @cocktails.each do |cocktail| %>
         <figure class="card">
             <%= cl_image_tag cocktail.photo.key, alt: "alttext" %>
-            <figcaption><%= link_to cocktail.name, cocktail_path(cocktail) %></figcaption>
+            <figcaption><%= link_to cocktail.name, cocktail_path(cocktail), style: "color:white; text-decoration:none;"%></figcaption>
         </figure>
       <% end %>
     </div>

@@ -6,6 +6,8 @@
 <br>
   <div class="left-column">
     <div class="show-cards">
+      <br>
+      <br>
       <h1><%= @cocktail.name %></h1>
       <p><%= @cocktail.about %></p>
       <figure class="card">
@@ -14,18 +16,29 @@
     </div>
   </div>
   <div class="right-column">
-    <div class="cocktail-description">
-
-      <p>Method</p>
-      <%= h(@cocktail.method).gsub(/\n/, '<br/>').html_safe %>
+    <br>
+    <br>
+    <br>
+    <div class="container">
+      <h1>Ingredients</h1>
       <% @cocktail.ingredients.each do |ingredient| %>
         <ul>
           <li><%= ingredient.name %></li>
         </ul>
       <% end %>
-    <%= link_to "Add ingredient",  new_cocktail_dose_path(@cocktail), class: 'btn btn-primary' %>
-    <%= link_to "Go back to cocktails", cocktails_path, class: 'btn btn-primary' %>
-    <%= link_to "Delete ingredient", dose_path(@cocktail), class: 'btn btn-danger' %>
+      <br>
+      <%= link_to "Add Ingredient",  new_cocktail_dose_path(@cocktail), class: 'btn btn-primary' %>
+      <%= link_to "Delete Ingredient", dose_path(@cocktail), class: 'btn btn-danger' %>
+      <hr>
+    </div>
+    <div class="container">
+      <h1>Method</h1>
+      <%= h(@cocktail.method).gsub(/\n/, '<br/>').html_safe %>
+    </div>
+    <hr>
+    <div class="container">
+      <%= link_to "Edit/Delete Cocktail", edit_cocktail_path(@cocktail), class: 'btn btn-primary' %>
+      <%= link_to "Go Back", cocktails_path, class: 'btn btn-primary' %>
     </div>
   </div>
 </div>

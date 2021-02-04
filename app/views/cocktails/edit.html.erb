@@ -1,0 +1,22 @@
+<%= render 'shared/nav_affix' %>
+<br>
+<br>
+<br>
+<div class="container">
+  <div class="form-container">
+    <%= simple_form_for(@cocktail) do |f| %>
+      <%= f.error_notification %>
+      <h1>Cocktail Name</h1>
+      <%= f.input :name, label: false %>
+
+      <h1>About</h1>
+      <%= f.input :about, label: false %>
+
+      <h1>Method</h1>
+      <%= f.input :method, label: false, :input_html => {:rows => 10} %>
+      <%= f.button :submit, class: "btn btn-primary" %>
+      <%= link_to "Delete Cocktail", cocktail_path(@cocktail), method: :delete, class: "btn btn-danger", :data => {:confirm => "Are You Sure?"} %>
+      <%= link_to "Cancel", request.referer.present? ? request.referer : root_path, class: "btn btn-primary" %>
+    <% end %>
+  </div>
+</div>
