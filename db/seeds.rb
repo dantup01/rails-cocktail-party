@@ -1,3 +1,5 @@
+require "open-uri"
+
 puts 'Cleaning database...'
 Cocktail.destroy_all
 Ingredient.destroy_all
@@ -68,15 +70,37 @@ MANHATTAN_METHOD = "1) Put the rye, vermouth and bitters into a cocktail shaker 
 STORMY_METHOD = "1) Pour the ginger beer into an ice-filled glass, follow with the dark rum \n
 2) Garnish your Dark and Stormy with a wedge of lime"
 
-Cocktail.create(name: "Classic Martini", about: "Classic Martini", method: MARTINI_METHOD)
-Cocktail.create(name: "Pisco Sour", about: "Pisco Sour", method: PISCO_METHOD)
-Cocktail.create(name: "Caipirinha", about: "Caipirinha", method: CAIPIRINHA_METHOD)
-Cocktail.create(name: "Margarita", about: "Margarita", method: MARGARITA_METHOD)
-Cocktail.create(name: "Manhattan", about: "Manhattan", method: MANHATTAN_METHOD)
-Cocktail.create(name: "Negroni", about: "Negroni", method: NEGRONI_METHOD)
-Cocktail.create(name: "Mojito", about: "Mojito", method: MOJITO_METHOD)
-Cocktail.create(name: "Dark and Stormy", about: "Dark and Stormy", method: STORMY_METHOD)
-Cocktail.create(name: "Espresso Martini", about: "Espresso Martini", method: ESPRESSO_METHOD)
-Cocktail.create(name: "Tom Collins", about: "Tom Collins", method: COLLINS_METHOD)
+martini = Cocktail.create(name: "Classic Martini", about: "Classic Martini", method: MARTINI_METHOD)
+pisco = Cocktail.create(name: "Pisco Sour", about: "Pisco Sour", method: PISCO_METHOD)
+caipirinha = Cocktail.create(name: "Caipirinha", about: "Caipirinha", method: CAIPIRINHA_METHOD)
+margarita = Cocktail.create(name: "Margarita", about: "Margarita", method: MARGARITA_METHOD)
+manhattan = Cocktail.create(name: "Manhattan", about: "Manhattan", method: MANHATTAN_METHOD)
+negroni = Cocktail.create(name: "Negroni", about: "Negroni", method: NEGRONI_METHOD)
+mojito = Cocktail.create(name: "Mojito", about: "Mojito", method: MOJITO_METHOD)
+stormy = Cocktail.create(name: "Dark and Stormy", about: "Dark and Stormy", method: STORMY_METHOD)
+espresso = Cocktail.create(name: "Espresso Martini", about: "Espresso Martini", method: ESPRESSO_METHOD)
+collins = Cocktail.create(name: "Tom Collins", about: "Tom Collins", method: COLLINS_METHOD)
+
+martini_file = URI.open('app/assets/images/classic_martini.jpg')
+pisco_file = URI.open('app/assets/images/pisco_sour.jpg')
+caipirinha_file = URI.open('app/assets/images/caipirinha.jpg')
+margarita_file = URI.open('app/assets/images/margarita.jpg')
+manhattan_file = URI.open('app/assets/images/manhattan.jpg')
+negroni_file = URI.open('app/assets/images/negroni.jpg')
+mojito_file = URI.open('app/assets/images/mojito.jpg')
+stormy_file = URI.open('app/assets/images/stormy.jpg')
+espresso_file = URI.open('app/assets/images/espresso.jpg')
+collins_file = URI.open('app/assets/images/tom_collins.jpg')
+
+martini.photo.attach(io: martini_file, filename: 'classic_martini.jpg', content_type: 'image/jpg')
+pisco.photo.attach(io: pisco_file, filename: 'pisco_sour.jpg', content_type: 'image/jpg')
+caipirinha.photo.attach(io: caipirinha_file, filename: 'caipirinha.jpg', content_type: 'image/jpg')
+margarita.photo.attach(io: margarita_file, filename: 'margarita.jpg', content_type: 'image/jpg')
+manhattan.photo.attach(io: manhattan_file, filename: 'manhattan.jpg', content_type: 'image/jpg')
+negroni.photo.attach(io: negroni_file, filename: 'negroni.jpg', content_type: 'image/jpg')
+mojito.photo.attach(io: mojito_file, filename: 'mojito.jpg', content_type: 'image/jpg')
+stormy.photo.attach(io: stormy_file, filename: 'stormy.jpg', content_type: 'image/jpg')
+espresso.photo.attach(io: espresso_file, filename: 'espresso.jpg', content_type: 'image/jpg')
+collins.photo.attach(io: collins_file, filename: 'tom_collins.jpg', content_type: 'image/jpg')
 
 puts 'Finished!'

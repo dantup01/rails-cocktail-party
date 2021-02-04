@@ -9,7 +9,7 @@
       <h1><%= @cocktail.name %></h1>
       <p><%= @cocktail.about %></p>
       <figure class="card">
-          <%= image_tag "#{@cocktail.name.downcase}.jpg", alt: "alttext" %>
+          <%= cl_image_tag @cocktail.photo.key, alt: "alttext" %>
       </figure>
     </div>
   </div>
