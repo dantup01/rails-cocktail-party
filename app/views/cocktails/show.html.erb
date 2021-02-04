@@ -1,12 +1,11 @@
-<h1><%= @cocktail.name %></h1>
-<p><%= @cocktail.description %></p>
+<div class="container"
+  <h1><%= @cocktail.name %></h1>
+  <p><%= @cocktail.about %></p>
 
-<% @cocktail.ingredients.each do |ingredient| %>
-  <%= ingredient.alcohol.name %>
-  <%= ingredient.mixer.name %>
-  <%= ingredient.garnish.name %>
-  <%= ingredient.method %>
-<% end %>
-<%= link_to "Add ingredient",  new_cocktail_ingredient_path(@cocktail), class: 'btn btn-primary' %>
-<%= link_to "Go back to cocktails", cocktails_path, class: 'btn btn-primary' %>
-<%= link_to "Delete ingredient", cocktail_ingredient_path(@cocktail), class: 'btn btn-danger' %>
+  <% @cocktail.ingredients.each do |ingredient| %>
+    <%= ingredient.name %>
+  <% end %>
+  <%= link_to "Add dose",  new_cocktail_dose_path(@cocktail), class: 'btn btn-primary' %>
+  <%= link_to "Go back to cocktails", cocktails_path, class: 'btn btn-primary' %>
+  <%= link_to "Delete ingredient", dose_path(@cocktail), class: 'btn btn-danger' %>
+</div>
