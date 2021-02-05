@@ -7,38 +7,54 @@
   <div class="left-column">
     <div class="show-cards">
       <br>
-      <br>
       <h1><%= @cocktail.name %></h1>
-      <p><%= @cocktail.about %></p>
       <figure class="card">
           <%= cl_image_tag @cocktail.photo.key, alt: "alttext" %>
       </figure>
+      <p><%= @cocktail.about %></p>
     </div>
   </div>
   <div class="right-column">
     <br>
     <br>
-    <br>
     <div class="container">
-      <h1>Ingredients</h1>
-      <% @cocktail.ingredients.each do |ingredient| %>
-        <ul>
-          <li><%= ingredient.name %><%= ingredient.dose.description %></li>
+      <h3 style="text-align: center;">Ingredients</h3>
+      <hr>
+      <% @cocktail.doses.each do |d| %>
+        <ul style="list-style-type:none; padding: 0; text-align: center">
+          <li>
+            <%= d.ingredient.name %> :
+            <%= d.description %> |
+            <%= link_to "Delete", dose_path(d), method: :delete,
+            data: { confirm: "Are you sure?" } %>
+          </li>
         </ul>
       <% end %>
       <br>
-      <%= link_to "Add Ingredient",  new_cocktail_dose_path(@cocktail), class: 'btn btn-primary' %>
-      <%= link_to "Delete Ingredient", dose_path(@cocktail), class: 'btn btn-danger' %>
+      <div class="button-container">
+        <div class="button-center">
+          <%= link_to "Add Ingredient",  new_cocktail_dose_path(@cocktail), class: 'btn btn-primary' %>
+        </div>
+      </div>
+    </div>
+    <br>
+    <br>
+    <div class="container">
+      <h3 style="text-align: center;">Method</h3>
       <hr>
+      <ul style="list-style-type:none; padding: 0; text-align: center">
+        <li><%= h(@cocktail.method).gsub(/\n/, '<br/>').html_safe %></li>
+      </ul>
     </div>
-    <div class="container">
-      <h1>Method</h1>
-      <%= h(@cocktail.method).gsub(/\n/, '<br/>').html_safe %>
+    <br>
+    <div class="button-container">
+      <div class="button-center">
+        <%= link_to "Edit/Delete Cocktail", edit_cocktail_path(@cocktail), class: 'btn btn-primary' %>
+        <%= link_to "Go Back", cocktails_path, class: 'btn btn-primary' %>
+      </div>
     </div>
-    <hr>
-    <div class="container">
-      <%= link_to "Edit/Delete Cocktail", edit_cocktail_path(@cocktail), class: 'btn btn-primary' %>
-      <%= link_to "Go Back", cocktails_path, class: 'btn btn-primary' %>
-    </div>
+    <br>
+    <br>
+    <br>
   </div>
 </div>

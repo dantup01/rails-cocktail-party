@@ -1,5 +1,5 @@
 class DosesController < ApplicationController
-  before_action :set_cocktail, only: [:new, :create]
+  before_action :set_cocktail, only: [:new, :create, :edit, :update]
 
   def new
     @dose = Dose.new
@@ -13,6 +13,16 @@ class DosesController < ApplicationController
       redirect_to cocktail_path(@cocktail)
     else
       render :new
+    end
+  end
+
+  def edit; end
+
+  def update
+    if @dose.update(dose_params)
+      redirect_to cocktail_path(@cocktail), notice: "Dosage Updated"
+    else
+      render :edit
     end
   end
 

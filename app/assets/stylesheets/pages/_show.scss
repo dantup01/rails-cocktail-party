@@ -1,18 +1,31 @@
 @import "navbar_fixed";
 
 .left-column {
-  width: 50%;
+  width: 40%;
   float: left;
   text-align: center;
 }
 
 .right-column {
-  width: 40%;
+  width: 55%;
   float: right;
 }
 
 hr {
   border-color: white;
+}
+
+.button-container {
+  position: relative;
+}
+
+.button-center {
+  margin: 0;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
 }
 
 .show-cards .card {
@@ -30,4 +43,11 @@ hr {
   width: 100%;
   min-height: 100%;
   object-fit: cover;
+}
+
+@media only screen and (max-width: 768px) {
+  .left-column,
+  .right-column {
+    width: 100%;
+  }
 }

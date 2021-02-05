@@ -70,16 +70,16 @@ MANHATTAN_METHOD = "1) Put the rye, vermouth and bitters into a cocktail shaker 
 STORMY_METHOD = "1) Pour the ginger beer into an ice-filled glass, follow with the dark rum \n
 2) Garnish your Dark and Stormy with a wedge of lime"
 
-martini = Cocktail.create(name: "Classic Martini", about: "Classic Martini", method: MARTINI_METHOD)
-pisco = Cocktail.create(name: "Pisco Sour", about: "Pisco Sour", method: PISCO_METHOD)
-caipirinha = Cocktail.create(name: "Caipirinha", about: "Caipirinha", method: CAIPIRINHA_METHOD)
-margarita = Cocktail.create(name: "Margarita", about: "Margarita", method: MARGARITA_METHOD)
-manhattan = Cocktail.create(name: "Manhattan", about: "Manhattan", method: MANHATTAN_METHOD)
-negroni = Cocktail.create(name: "Negroni", about: "Negroni", method: NEGRONI_METHOD)
-mojito = Cocktail.create(name: "Mojito", about: "Mojito", method: MOJITO_METHOD)
-stormy = Cocktail.create(name: "Dark and Stormy", about: "Dark and Stormy", method: STORMY_METHOD)
-espresso = Cocktail.create(name: "Espresso Martini", about: "Espresso Martini", method: ESPRESSO_METHOD)
-collins = Cocktail.create(name: "Tom Collins", about: "Tom Collins", method: COLLINS_METHOD)
+martini = Cocktail.create(name: "Classic Martini", about: "Over the years, the martini has become one of the best-known mixed alcoholic beverages. H. L. Mencken called the martini 'the only American invention as perfect as the sonnet'", method: MARTINI_METHOD)
+pisco = Cocktail.create(name: "Pisco Sour", about: "A pisco sour is an alcoholic cocktail of Peruvian origin that is typical of the cuisines from Peru and Chile. The drink's name comes from pisco, which is its base liquor, and the cocktail term sour, in reference to sour citrus juice and sweetener components.", method: PISCO_METHOD)
+caipirinha = Cocktail.create(name: "Caipirinha", about: "Caipirinha is Brazil's national cocktail, and it is made with muddled lime, sugar, ice, and yes, cachaca. Like with most spirits, there are aged and unaged cachacas. The latter is used to make cocktails such as the Caipirinha.", method: CAIPIRINHA_METHOD)
+margarita = Cocktail.create(name: "Margarita", about: "A margarita is a cocktail consisting of tequila, orange liqueur, and lime juice often served with salt on the rim of the glass. The drink is served shaken with ice (on the rocks), blended with ice (frozen margarita), or without ice (straight up).", method: MARGARITA_METHOD)
+manhattan = Cocktail.create(name: "Manhattan", about: "The Manhattan is a classic cocktail of choice for whiskey-lovers. This delightful mix of rye or bourbon whiskey, sweet vermouth, and bitters has been adored for hundreds of years because of its subtle bitterness and herbal undertones.", method: MANHATTAN_METHOD)
+negroni = Cocktail.create(name: "The Negroni is a popular Italian cocktail, made of one part gin, one part vermouth rosso (red, semi-sweet), and one part Campari, garnished with orange peel. It is considered an apéritif.", about: "Negroni", method: NEGRONI_METHOD)
+mojito = Cocktail.create(name: "Mojito", about: "The mojito is one of the oldest mixed drinks that is still consumed today. While the exact history of this cocktail is still a little murky, it is estimated that it first originated in the 1500s. The name has roots in African language. The name mojito comes from the word “mojo” which means talisman or magic charm.", method: MOJITO_METHOD)
+stormy = Cocktail.create(name: "Dark 'N' Stormy", about: "A Dark ’n’ Stormy is a highball cocktail made with dark rum and ginger beer served over ice and garnished with a slice of lime. Lime juice and simple syrup are also frequently added. This drink is very similar to the Moscow mule except that the Dark 'n' Stormy has dark rum instead of vodka.", method: STORMY_METHOD)
+espresso = Cocktail.create(name: "Espresso Martini", about: "The espresso martini is a cold, coffee-flavored cocktail made with vodka, espresso coffee, coffee liqueur, and sugar syrup. It is not a true martini as it contains neither gin nor vermouth, but is one of many drinks that incorporate the term into their names.", method: ESPRESSO_METHOD)
+collins = Cocktail.create(name: "Tom Collins", about: "The Tom Collins is a Collins cocktail made from gin, lemon juice, sugar, and carbonated water. First memorialized in writing in 1876 by Jerry Thomas, 'the father of American mixology', this 'gin and sparkling lemonade' drink is typically served in a Collins glass over ice.", method: COLLINS_METHOD)
 
 martini_file = URI.open('app/assets/images/classic_martini.jpg')
 pisco_file = URI.open('app/assets/images/pisco_sour.jpg')
